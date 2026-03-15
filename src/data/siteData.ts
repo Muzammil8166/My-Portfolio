@@ -79,7 +79,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'React', level: 95 },
       { name: 'TypeScript', level: 90 },
       { name: 'Next.js', level: 85 },
-      { name: 'Tailwind CSS', level: 90 },
+      { name: 'Tailwind CSS', level: 95 },
       { name: 'Redux', level: 80 },
     ],
   },
@@ -97,7 +97,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       { name: 'MongoDB', level: 90 },
       { name: 'PostgreSQL', level: 80 },
-      { name: 'MySQL', level: 75 },
+      { name: 'MySQL', level: 90 },
     ],
   },
   {
