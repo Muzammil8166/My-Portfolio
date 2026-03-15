@@ -75,9 +75,7 @@ export function Hero() {
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 font-mono text-sm text-[rgb(var(--fg))]">
                 <span className="text-[rgb(var(--muted))]">$</span>{' '}
                 <span className="text-purple-300">{text}</span>
-                <span className="ml-1 inline-block w-2 animate-pulse rounded bg-white/30 align-[-2px]">
-                  &nbsp;
-                </span>
+                <span className="ml-1 inline-block h-4 w-[3px] animate-pulse rounded-full bg-[rgb(var(--accent))] align-[-2px]" />
               </div>
              
              <div className='flex felx-row gap-3'>
@@ -162,7 +160,7 @@ export function Hero() {
                   </div>
                   <a
                     href={`mailto:${SITE.email}`}
-                    className="mt-1 block text-sm font-semibold text-purple-300 hover:text-purple-200"
+                    className="mt-1 block text-sm font-semibold text-purple-100 dark:text-purple-300 hover:text-purple-200"
                   >
                     {SITE.email}
                   </a>

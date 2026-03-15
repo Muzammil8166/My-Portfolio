@@ -23,7 +23,7 @@ export function CustomCursor() {
   return (
     <motion.div
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-[90] h-5 w-5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md"
+      className="pointer-events-none fixed left-0 top-0 z-[90] h-5 w-5 rounded-full border border-[rgb(var(--accent))]/70 bg-[rgb(var(--accent))]/16  backdrop-blur-md"
       style={{ translateX: sx, translateY: sy }}
     />
   )

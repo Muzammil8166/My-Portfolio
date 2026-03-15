@@ -82,7 +82,12 @@ export function Navbar(props: {
                   {isActive ? (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 -z-10 rounded-xl bg-white/5 ring-1 ring-white/10"
+                      className={[
+                        'absolute inset-0 -z-10 rounded-xl',
+                        props.theme === 'light'
+                          ? 'bg-black/5 ring-1 ring-black/10'
+                          : 'bg-white/5 ring-1 ring-white/10',
+                      ].join(' ')}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   ) : null}

@@ -1,11 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { usePrefersReducedMotion } from './usePrefersReducedMotion'
 
 export function useTypewriter(
   phrases: string[],
   opts?: { typingMs?: number; pauseMs?: number; deletingMs?: number },
 ) {
-  const reduced = usePrefersReducedMotion()
   const typingMs = opts?.typingMs ?? 38
   const deletingMs = opts?.deletingMs ?? 22
   const pauseMs = opts?.pauseMs ?? 900
@@ -20,8 +18,6 @@ export function useTypewriter(
   const [dir, setDir] = useState<'type' | 'pause' | 'delete'>('type')
 
   useEffect(() => {
-    if (reduced) return
-
     const phrase = safePhrases[i] ?? ''
     const isDone = text === phrase
     const isEmpty = text.length === 0
@@ -56,8 +52,8 @@ export function useTypewriter(
     }, delay)
 
     return () => window.clearTimeout(t)
-  }, [deletingMs, dir, i, pauseMs, reduced, safePhrases, text, typingMs])
+  }, [deletingMs, dir, i, pauseMs, safePhrases, text, typingMs])
 
-  return { text: reduced ? (safePhrases[0] ?? '') : text }
+  return { text }
 }
 
