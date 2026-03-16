@@ -170,7 +170,7 @@ export function Navbar(props: {
                   >
                     <span>{item.label}</span>
                     {item.id === props.active ? (
-                      <span className="h-2 w-2 animate-ping rounded-full bg-[rgb(var(--accent))]" />
+                      <span className="h-2 w-2 rounded-full bg-[rgb(var(--accent))]" />
                     ) : null}
                   </button>
                 ))}

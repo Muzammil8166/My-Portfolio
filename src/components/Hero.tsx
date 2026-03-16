@@ -28,7 +28,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[rgb(var(--muted))]"
             >
-              <span className="h-2 w-2 animate-ping rounded-full bg-[rgb(var(--accent))]" />
+              <span className="h-2 w-2 animate-ping rounded-full bg-green-500" />
               Available For Impactful Projects
             </motion.div>
 
