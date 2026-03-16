@@ -13,13 +13,13 @@ export function Hero() {
   const { text } = useTypewriter(SITE.typingPhrases)
 
   return (
-    <section id="home" className="relative overflow-hidden pt-16">
+    <section id="home" className="relative overflow-hidden scroll-mt-16">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-40 -top-48 h-[420px] w-[420px] rounded-full bg-purple-500/20 blur-3xl" />
         <div className="absolute -right-40 -top-32 h-[420px] w-[420px] rounded-full bg-cyan-400/15 blur-3xl" />
       </div>
 
-      <Container className="relative py-14 sm:py-20">
+      <Container className="relative pb-14 pt-8 sm:pb-20 sm:pt-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
           <div>
             <motion.div
