@@ -78,7 +78,7 @@ export function Contact() {
                 error={errors.name?.message}
                 input={
                   <input
-                    className="h-11 w-full rounded-2xl border border-white/10 bg-white/5 px-4 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-white/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
+                    className="h-11 w-full rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-4 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-[rgb(var(--fg))]/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
                     placeholder="Your name"
                     {...register('name')}
                   />
@@ -89,7 +89,7 @@ export function Contact() {
                 error={errors.email?.message}
                 input={
                   <input
-                    className="h-11 w-full rounded-2xl border border-white/10 bg-white/5 px-4 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-white/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
+                    className="h-11 w-full rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-4 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-[rgb(var(--fg))]/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
                     placeholder="you@email.com"
                     {...register('email')}
                   />
@@ -103,7 +103,7 @@ export function Contact() {
                 error={errors.message?.message}
                 input={
                   <textarea
-                    className="min-h-[140px] w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-white/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
+                    className="min-h-[140px] w-full resize-none rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-4 py-3 text-sm text-[rgb(var(--fg))] outline-none transition focus:border-[rgb(var(--fg))]/20 focus:ring-2 focus:ring-[rgb(var(--ring))]/40"
                     placeholder="Tell me about your project..."
                     {...register('message')}
                   />
@@ -140,9 +140,9 @@ export function Contact() {
               <div className="mt-4 space-y-3 text-sm">
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-[rgb(var(--fg))] transition hover:bg-white/10"
+                  className="flex items-center gap-3 rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-4 py-3 text-[rgb(var(--fg))] transition hover:bg-[rgb(var(--fg))]/10"
                 >
-                  <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10">
+                  <span className="grid h-9 w-9 place-items-center rounded-xl bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
                     <Mail className="h-4 w-4" />
                   </span>
                   <span>
@@ -151,8 +151,8 @@ export function Contact() {
                   </span>
                 </a>
 
-                <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-[rgb(var(--fg))]">
-                  <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10">
+                <div className="flex items-center gap-3 rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-4 py-3 text-[rgb(var(--fg))]">
+                  <span className="grid h-9 w-9 place-items-center rounded-xl bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
                     <MapPin className="h-4 w-4" />
                   </span>
                   <span>
@@ -174,7 +174,7 @@ export function Contact() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-[rgb(var(--fg))]/80 transition hover:-translate-y-[1px] hover:bg-white/10 hover:text-[rgb(var(--fg))]"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-3 py-2 text-sm text-[rgb(var(--fg))]/80 transition hover:-translate-y-[1px] hover:bg-[rgb(var(--fg))]/10 hover:text-[rgb(var(--fg))]"
                   >
                     <s.icon className="h-4 w-4" />
                     {s.label}

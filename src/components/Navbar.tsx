@@ -46,7 +46,7 @@ export function Navbar(props: {
     >
       <div
         className={[
-          'border-b border-white/10',
+          'border-b border-[rgb(var(--fg))]/10',
           scrolled
             ? 'bg-[rgb(var(--bg))]/70 backdrop-blur-xl'
             : 'bg-transparent',
@@ -55,9 +55,9 @@ export function Navbar(props: {
         <Container className="flex h-16 items-center justify-between">
           <button
             onClick={() => scrollToId('home')}
-            className="group inline-flex items-center gap-2 rounded-xl px-2 py-2 text-sm font-semibold tracking-tight hover:bg-white/5"
+            className="group inline-flex items-center gap-2 rounded-xl px-2 py-2 text-sm font-semibold tracking-tight hover:bg-[rgb(var(--fg))]/5"
           >
-            <span className="relative grid h-6 w-6 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10">
+            <span className="relative grid h-6 w-6 place-items-center rounded-lg bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
               <span className="h-2.5 w-2.5 rounded-full bg-[rgb(var(--accent))]" />
             </span>
             <span className="text-[rgb(var(--fg))]">
@@ -86,7 +86,7 @@ export function Navbar(props: {
                         'absolute inset-0 -z-10 rounded-xl',
                         props.theme === 'light'
                           ? 'bg-black/5 ring-1 ring-black/10'
-                          : 'bg-white/5 ring-1 ring-white/10',
+                          : 'bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10',
                       ].join(' ')}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
@@ -120,7 +120,7 @@ export function Navbar(props: {
             </Button>
 
             <button
-              className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-[rgb(var(--fg))] transition hover:bg-white/10 md:hidden"
+              className="grid h-10 w-10 place-items-center rounded-xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 text-[rgb(var(--fg))] transition hover:bg-[rgb(var(--fg))]/10 md:hidden"
               aria-label="Open menu"
               onClick={() => setOpen(true)}
             >
@@ -143,7 +143,7 @@ export function Navbar(props: {
               onMouseDown={() => setOpen(false)}
             />
             <motion.div
-              className="absolute right-3 top-3 w-[min(92vw,360px)] overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--card))]/95 shadow-2xl backdrop-blur-xl"
+              className="absolute right-3 top-3 w-[min(92vw,360px)] overflow-hidden rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--card))]/95 shadow-2xl backdrop-blur-xl"
               initial={{ opacity: 0, y: -8, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
@@ -152,17 +152,17 @@ export function Navbar(props: {
               <div className="flex items-center justify-between px-4 py-3">
                 <div className="text-sm font-semibold">Menu</div>
                 <button
-                  className="rounded-lg p-2 text-[rgb(var(--muted))] transition hover:bg-white/5 hover:text-[rgb(var(--fg))]"
+                  className="rounded-lg p-2 text-[rgb(var(--muted))] transition hover:bg-[rgb(var(--fg))]/5 hover:text-[rgb(var(--fg))]"
                   onClick={() => setOpen(false)}
                 >
                   <X className="h-4 w-4" />
                 </button>
               </div>
-              <div className="border-t border-white/10 p-2">
+              <div className="border-t border-[rgb(var(--fg))]/10 p-2">
                 {items.map((item) => (
                   <button
                     key={item.id}
-                    className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-[rgb(var(--fg))] hover:bg-white/5"
+                    className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-[rgb(var(--fg))] hover:bg-[rgb(var(--fg))]/5"
                     onClick={() => {
                       setOpen(false)
                       scrollToId(item.id)

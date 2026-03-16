@@ -8,7 +8,7 @@ export function SectionHeading(props: {
   return (
     <div className="mb-10">
       {props.eyebrow ? (
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-[rgb(var(--muted))]">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-3 py-1 text-xs font-medium tracking-wide text-[rgb(var(--muted))]">
           <span className="h-2 w-2 rounded-full bg-[rgb(var(--accent))]" />
           {props.eyebrow}
         </div>

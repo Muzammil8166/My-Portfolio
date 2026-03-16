@@ -40,7 +40,7 @@ export function About() {
                 I love turning complex requirements into simple, maintainable
                 systems.
               </p>
-              <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm">
+              <div className="mt-5 rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 p-4 text-sm">
                 <div className="text-[rgb(var(--muted))]">Tech philosophy</div>
                 <div className="mt-2 font-medium">
                   Build what scales today, design for tomorrow.
@@ -59,25 +59,25 @@ export function About() {
             <div className="glass rounded-3xl p-6">
               <div className="text-sm font-semibold">What I bring</div>
               <ul className="mt-4 grid gap-3 text-sm text-[rgb(var(--muted))] sm:grid-cols-2">
-                <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <li className="rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 p-4">
                   <div className="text-[rgb(var(--fg))]">Frontend depth</div>
                   <div className="mt-1">
                     Design systems, animations, and performance.
                   </div>
                 </li>
-                <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <li className="rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 p-4">
                   <div className="text-[rgb(var(--fg))]">Backend pragmatism</div>
                   <div className="mt-1">
                     APIs, auth, caching, and scalable patterns.
                   </div>
                 </li>
-                <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <li className="rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 p-4">
                   <div className="text-[rgb(var(--fg))]">Product mindset</div>
                   <div className="mt-1">
                     Ship impact, measure outcomes, iterate quickly.
                   </div>
                 </li>
-                <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <li className="rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 p-4">
                   <div className="text-[rgb(var(--fg))]">Team enablement</div>
                   <div className="mt-1">
                     Clear patterns, docs, and DX improvements.
@@ -123,7 +123,7 @@ function Fact(props: {
   return (
     <div className="glass rounded-3xl p-5">
       <div className="flex items-center gap-2 text-xs font-medium text-[rgb(var(--muted))]">
-        <span className="grid h-7 w-7 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10">
+        <span className="grid h-7 w-7 place-items-center rounded-xl bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
           {props.icon}
         </span>
         {props.label}

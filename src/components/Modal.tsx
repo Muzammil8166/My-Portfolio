@@ -25,16 +25,16 @@ export function Modal(props: {
             role="dialog"
             aria-modal="true"
             aria-label={props.title ?? 'Modal'}
-            className="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--card))]/90 shadow-2xl backdrop-blur-xl"
+            className="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--card))]/90 shadow-2xl backdrop-blur-xl"
             initial={{ y: 24, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 24, opacity: 0, scale: 0.98 }}
             transition={{ type: 'spring', stiffness: 260, damping: 22 }}
           >
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+            <div className="flex items-center justify-between border-b border-[rgb(var(--fg))]/10 px-5 py-4">
               <div className="text-sm font-semibold">{props.title}</div>
               <button
-                className="rounded-lg p-2 text-[rgb(var(--muted))] transition hover:bg-white/5 hover:text-[rgb(var(--fg))]"
+                className="rounded-lg p-2 text-[rgb(var(--muted))] transition hover:bg-[rgb(var(--fg))]/5 hover:text-[rgb(var(--fg))]"
                 onClick={props.onClose}
               >
                 <X className="h-4 w-4" />

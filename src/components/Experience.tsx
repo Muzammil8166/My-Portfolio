@@ -15,7 +15,7 @@ export function Experience() {
 
         <div className="relative mt-10">
           {/* Vertical line: Mobile = left, Desktop = center */}
-          <div className="absolute left-4 top-0 h-full w-px bg-white/10 sm:left-1/2 sm:-translate-x-1/2" />
+          <div className="absolute left-4 top-0 h-full w-px bg-[rgb(var(--fg))]/10 sm:left-1/2 sm:-translate-x-1/2" />
 
           <div className="space-y-8 sm:space-y-12">
             {EXPERIENCE.map((item, idx) => {
@@ -33,7 +33,7 @@ export function Experience() {
                   {/* The Timeline Marker */}
                   <div
                     className={[
-                      'absolute top-6 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full border border-white/20 bg-[rgb(var(--card))]',
+                      'absolute top-6 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full border border-[rgb(var(--fg))]/20 bg-[rgb(var(--card))]',
                       // Mobile: Circle shape placed on left line
                       'left-4 h-6 w-6 justify-center',
                       // Desktop: Pill shape placed on center line
@@ -56,7 +56,7 @@ export function Experience() {
                         <div className="text-sm font-semibold">{item.role}</div>
                         <div className="mt-1 text-sm text-[rgb(var(--muted))]">{item.company}</div>
                       </div>
-                      <div className="rounded-full bg-white/5 px-3 py-1 text-xs text-[rgb(var(--muted))] ring-1 ring-white/10">
+                      <div className="rounded-full bg-[rgb(var(--fg))]/5 px-3 py-1 text-xs text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10">
                         {item.duration}
                       </div>
                     </div>
@@ -74,7 +74,7 @@ export function Experience() {
                       {item.tech.map((t) => (
                         <span
                           key={t}
-                          className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-white/10"
+                          className="rounded-full bg-[rgb(var(--fg))]/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10"
                         >
                           {t}
                         </span>

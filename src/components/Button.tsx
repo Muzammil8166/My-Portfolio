@@ -19,7 +19,7 @@ export function Button(
       `glass-btn border  text-[rgb(var(--fg))] border-[rgb(var(--border))]/20 hover:border-purple-500 hover:-translate-y-[1px]`,
 
     ghost:
-      `text-[rgb(var(--fg))]/80 hover:bg-white/5 hover:text-[rgb(var(--fg))]`,
+      `text-[rgb(var(--fg))]/80 hover:bg-[rgb(var(--fg))]/5 hover:text-[rgb(var(--fg))]`,
   };
 
   return (

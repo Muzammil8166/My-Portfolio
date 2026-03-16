@@ -115,7 +115,7 @@ export function GitHubStats() {
               className="glass rounded-3xl p-5"
             >
               <div className="flex items-center gap-2 text-xs font-medium text-[rgb(var(--muted))]">
-                <span className="grid h-7 w-7 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10">
+                <span className="grid h-7 w-7 place-items-center rounded-xl bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
                   {c.icon}
                 </span>
                 {c.label}

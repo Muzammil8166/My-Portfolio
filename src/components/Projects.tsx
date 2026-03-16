@@ -61,7 +61,7 @@ export function Projects() {
           />
 
           <div className="flex flex-wrap items-center gap-2">
-            <div className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-[rgb(var(--muted))]">
+            <div className="inline-flex items-center gap-2 rounded-2xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-3 py-2 text-xs text-[rgb(var(--muted))]">
               <SlidersHorizontal className="h-4 w-4" />
               Filter
             </div>
@@ -73,8 +73,8 @@ export function Projects() {
                   className={[
                     'rounded-xl px-3 py-2 text-xs font-medium transition',
                     t === filter
-                      ? 'bg-white/10 text-[rgb(var(--fg))] ring-1 ring-white/15'
-                      : 'bg-white/5 text-[rgb(var(--muted))] ring-1 ring-white/10 hover:bg-white/10 hover:text-[rgb(var(--fg))]',
+                      ? 'bg-[rgb(var(--fg))]/10 text-[rgb(var(--fg))] ring-1 ring-[rgb(var(--fg))]/15'
+                      : 'bg-[rgb(var(--fg))]/5 text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10 hover:bg-[rgb(var(--fg))]/10 hover:text-[rgb(var(--fg))]',
                   ].join(' ')}
                 >
                   {t}
@@ -98,9 +98,9 @@ export function Projects() {
                 exit={{ opacity: 0, y: 16 }}
                 transition={{ duration: 0.35 }}
                 onClick={() => setSelected(p)}
-                className="group glass text-left rounded-3xl p-4 transition hover:-translate-y-[2px] hover:border-white/20"
+                className="group glass text-left rounded-3xl p-4 transition hover:-translate-y-[2px] hover:border-[rgb(var(--fg))]/20"
               >
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                <div className="relative overflow-hidden rounded-2xl border border-[rgb(var(--fg))]/10 bg-black/20">
                   <img
                     src={p.image}
                     alt={p.title}
@@ -113,7 +113,7 @@ export function Projects() {
                 <div className="mt-4">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="text-sm font-semibold">{p.title}</h3>
-                    <span className="rounded-full bg-white/5 px-2 py-1 text-[10px] text-[rgb(var(--muted))] ring-1 ring-white/10">
+                    <span className="rounded-full bg-[rgb(var(--fg))]/5 px-2 py-1 text-[10px] text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10">
                       View
                     </span>
                   </div>
@@ -126,7 +126,7 @@ export function Projects() {
                   {p.tags.slice(0, 4).map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-white/10"
+                      className="rounded-full bg-[rgb(var(--fg))]/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10"
                     >
                       {t}
                     </span>
@@ -144,7 +144,7 @@ export function Projects() {
         >
           {selected ? (
             <div className="grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
-              <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+              <div className="overflow-hidden rounded-2xl border border-[rgb(var(--fg))]/10 bg-black/20">
                 <img
                   src={selected.image}
                   alt={selected.title}
@@ -160,7 +160,7 @@ export function Projects() {
                   {selected.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-white/10"
+                      className="rounded-full bg-[rgb(var(--fg))]/5 px-2.5 py-1 text-[11px] text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10"
                     >
                       {t}
                     </span>
@@ -226,11 +226,11 @@ export function Projects() {
                 href={r.html_url}
                 target="_blank"
                 rel="noreferrer"
-                className="glass rounded-3xl p-5 transition hover:-translate-y-[2px] hover:border-white/20"
+                className="glass rounded-3xl p-5 transition hover:-translate-y-[2px] hover:border-[rgb(var(--fg))]/20"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="text-sm font-semibold">{r.name}</div>
-                  <div className="inline-flex items-center gap-1 rounded-full bg-white/5 px-2 py-1 text-[10px] text-[rgb(var(--muted))] ring-1 ring-white/10">
+                  <div className="inline-flex items-center gap-1 rounded-full bg-[rgb(var(--fg))]/5 px-2 py-1 text-[10px] text-[rgb(var(--muted))] ring-1 ring-[rgb(var(--fg))]/10">
                     <Github className="h-3.5 w-3.5" />
                     {r.stargazers_count}
                   </div>

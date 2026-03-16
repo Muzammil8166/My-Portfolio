@@ -33,7 +33,7 @@ export function Skills() {
                         {s.level}%
                       </div>
                     </div>
-                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/5 ring-1 ring-white/10">
+                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
                       <motion.div
                         className="h-full rounded-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400"
                         initial={{ width: 0 }}
