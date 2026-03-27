@@ -115,7 +115,7 @@ export function Contact() {
               <div className="text-xs text-[rgb(var(--muted))]">
                 By sending this form, you’ll open your email client.
               </div>
-              <Button type="submit" disabled={isSubmitting}>
+              <Button type="submit" disabled={isSubmitting} className='hover:cursor-pointer'>
                 {isSubmitting ? 'Sending…' : 'Send message'}
                 <Send className="h-4 w-4" />
               </Button>
