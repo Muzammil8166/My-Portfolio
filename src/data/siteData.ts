@@ -51,6 +51,7 @@ export const SITE = {
     'Node.js + Express',
     'MongoDB + PostgreSQL',
     'Performance + UX',
+    'Code. Create. Deploy.'
   ],
   resumeUrl: resumePdf as string,
   githubUsername: import.meta.env.VITE_GITHUB_USERNAME || 'muzammil8166',
