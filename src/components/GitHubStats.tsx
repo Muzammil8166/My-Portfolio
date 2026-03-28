@@ -89,7 +89,6 @@ export function GitHubStats() {
   ] as const
 
   const readmeStats = `https://github-readme-stats-sigma-five.vercel.app/api?username=muzammil8166&show_icons=true&theme=tokyonight`
-  )}&show_icons=true&hide_title=true&rank_icon=github&theme=transparent`
   const langStats = `https://github-readme-stats.vercel.app/api/top-langs/?username=${encodeURIComponent(
     username,
   )}&layout=compact&theme=transparent`
