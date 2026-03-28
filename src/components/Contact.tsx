@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -18,6 +19,30 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>
 
 export function Contact() {
+  const [popupMessage, setPopupMessage] = useState<string | null>(null)
+  const [popupType, setPopupType] = useState<'success' | 'error'>('success')
+  const popupTimerRef = useRef<number | null>(null)
+
+  const showPopup = (message: string, type: 'success' | 'error') => {
+    if (popupTimerRef.current) {
+      window.clearTimeout(popupTimerRef.current)
+    }
+
+    setPopupType(type)
+    setPopupMessage(message)
+    popupTimerRef.current = window.setTimeout(() => {
+      setPopupMessage(null)
+      popupTimerRef.current = null
+    }, 3000)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (popupTimerRef.current) {
+        window.clearTimeout(popupTimerRef.current)
+      }
+    }
+  }, [])
 
   async function onSubmit(values: FormValues) {
 
@@ -34,18 +59,18 @@ export function Contact() {
         "gntrbXVFtXw1f1A3B"
       )
 
-      alert("Message sent successfully! I'll get back to you soon.")
+      showPopup("Message sent successfully! I'll get back to you soon.", 'success')
       reset()
 
     } catch (error) {
       console.log(error)
-      alert("Failed to send message")
+      showPopup('Failed to send message', 'error')
     }
   }
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -56,6 +81,18 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-16 sm:py-20">
+      {popupMessage ? (
+        <div className="fixed left-1/2 top-20 z-50 w-[min(90vw,520px)] -translate-x-1/2 rounded-2xl border border-[rgb(var(--fg))]/20 bg-[rgb(var(--bg))]/95 px-5 py-4 text-sm text-[rgb(var(--fg))] shadow-2xl backdrop-blur-md">
+          <div className="flex items-center justify-between gap-3">
+            <p>{popupMessage}</p>
+            <span
+              className={`h-2.5 w-2.5 rounded-full ${
+                popupType === 'success' ? 'bg-emerald-400' : 'bg-red-400'
+              }`}
+            />
+          </div>
+        </div>
+      ) : null}
       <Container>
         <SectionHeading
           eyebrow="Contact"
@@ -121,12 +158,6 @@ export function Contact() {
               </Button>
             </div>
 
-            {isSubmitSuccessful ? (
-              <div className="mt-4 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-300">
-                Message sent! I'll get back to you soon.
-              </div>
-            ) :
-              null}
           </motion.form>
 
           <motion.div

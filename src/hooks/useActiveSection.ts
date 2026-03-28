@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { NavSectionId } from '../data/siteData'
 
 // Scroll-based "scrollspy" that picks the section whose top is closest
@@ -7,20 +7,25 @@ import type { NavSectionId } from '../data/siteData'
 export function useActiveSection(sectionIds: NavSectionId[]) {
   const ids = useMemo(() => Array.from(new Set(sectionIds)), [sectionIds])
   const [active, setActive] = useState<NavSectionId>(ids[0] ?? 'home')
+  const frameRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (!ids.length) return
+    const sections = ids
+      .map((id) => ({ id, el: document.getElementById(id) }))
+      .filter(
+        (x): x is { id: NavSectionId; el: HTMLElement } => x.el instanceof HTMLElement,
+      )
 
-    const handleScroll = () => {
+    if (!sections.length) return
+
+    const measure = () => {
       const viewportAnchor = window.innerHeight * 0.25
 
       let closestId: NavSectionId | null = null
       let closestDistance = Number.POSITIVE_INFINITY
 
-      for (const id of ids) {
-        const el = document.getElementById(id)
-        if (!el) continue
-
+      for (const { id, el } of sections) {
         const rect = el.getBoundingClientRect()
         const distance = Math.abs(rect.top - viewportAnchor)
 
@@ -30,20 +35,38 @@ export function useActiveSection(sectionIds: NavSectionId[]) {
         }
       }
 
-      if (closestId && closestId !== active) {
-        setActive(closestId)
+      if (closestId) {
+        setActive((prev) => (prev === closestId ? prev : closestId))
       }
+
+      frameRef.current = null
     }
 
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll)
+    const scheduleMeasure = () => {
+      if (frameRef.current !== null) return
+      frameRef.current = window.requestAnimationFrame(measure)
+    }
+
+    const onResize = () => {
+      if (frameRef.current !== null) {
+        window.cancelAnimationFrame(frameRef.current)
+        frameRef.current = null
+      }
+      measure()
+    }
+
+    measure()
+    window.addEventListener('scroll', scheduleMeasure, { passive: true })
+    window.addEventListener('resize', onResize)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
+      if (frameRef.current !== null) {
+        window.cancelAnimationFrame(frameRef.current)
+      }
+      window.removeEventListener('scroll', scheduleMeasure)
+      window.removeEventListener('resize', onResize)
     }
-  }, [active, ids])
+  }, [ids])
 
   return active
 }
