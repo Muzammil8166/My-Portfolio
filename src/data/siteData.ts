@@ -115,38 +115,46 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'LuxeMart E-commerce',
+    title: 'LuxeMart',
     description:
       'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
     image: '/luxemart.png',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     githubUrl: 'https://github.com/muzammil8166/',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://google.com',
   },
-
+  {
+    title: 'Thunderboltt',
+    description:
+      'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
+    image: '/thunderboltt.png',
+    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    githubUrl: 'https://github.com/muzammil8166/',
+    liveUrl: 'https://google.com',
+  },
 ]
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'Company Name',
-    role: 'Senior MERN Stack Developer',
-    duration: '2023 — Present',
+    role: 'Junior MERN Stack Developer',
+    duration: '2026 — Present',
     achievements: [
-      'Led the redesign of a multi-tenant SaaS dashboard, improving task completion by 28%.',
-      'Introduced performance budgets and profiling workflows, reducing LCP by 35%.',
-      'Built a reusable component library and patterns for scalable feature delivery.',
+      'Built a full-stack MERN Point of Sale system with admin panel, inventory management, and CRUD operations.',
+      'Worked on scalable project architecture, backend integration, and performance optimization to deliver efficient full-stack solutions.',
+      'Experienced in React, Redux, and API integration to create responsive and optimized web applications.',
     ],
-    tech: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'AWS'],
+    tech: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'TailwindCSS', 'Docker'],
   },
   {
-    company: 'Previous Company',
+    company: 'Freelancer',
     role: 'Full Stack Developer',
-    duration: '2020 — 2023',
+    duration: '2023 — 2026',
     achievements: [
-      'Shipped real-time collaboration features using websockets and event-driven services.',
-      'Implemented CI/CD pipelines and automated quality gates across repositories.',
+      'MERN Stack Developer with hands-on experience building full-stack web applications using MongoDB, Express.js, React, and Node.js.',
+      'Delivered scalable, user-friendly solutions with optimized performance and responsive UI tailored to client requirements.',
     ],
-    tech: ['React', 'Express', 'PostgreSQL', 'Docker', 'CI/CD'],
+    tech: ['React', 'Express', 'MySQL', 'Vercel',],
   },
 ]
 
