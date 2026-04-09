@@ -123,11 +123,12 @@ export function Navbar(props: {
             </Button>
 
             <button
-              className="grid h-10 w-10 place-items-center rounded-xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 text-[rgb(var(--fg))] transition hover:bg-[rgb(var(--fg))]/10 md:hidden"
+              className="flex h-10 items-center justify-center gap-2 rounded-xl border border-[rgb(var(--fg))]/10 bg-[rgb(var(--fg))]/5 px-3 text-[rgb(var(--fg))] transition hover:bg-[rgb(var(--fg))]/10 md:hidden"
               aria-label="Open menu"
               onClick={() => setOpen(true)}
             >
               <Menu className="h-5 w-5" />
+              <span className="text-sm font-medium">Menu</span>
             </button>
           </div>
         </Container>

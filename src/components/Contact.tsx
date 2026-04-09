@@ -150,7 +150,7 @@ export function Contact() {
 
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
               <div className="text-xs text-[rgb(var(--muted))]">
-                By sending this form, you’ll open your email client.
+                Your message will be sent directly to my inbox.
               </div>
               <Button type="submit" disabled={isSubmitting} className='hover:cursor-pointer'>
                 {isSubmitting ? 'Sending…' : 'Send message'}

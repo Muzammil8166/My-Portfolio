@@ -63,12 +63,12 @@ function computeGrade(stars: number, commits: number, prs: number, followers: nu
     followers * 0.45 +
     repos   * 0.5
 
-  if (score >= 400) return { letter: 'A+', pct: 95 }
-  if (score >= 250) return { letter: 'A',  pct: 85 }
-  if (score >= 150) return { letter: 'A-', pct: 75 }
-  if (score >= 100) return { letter: 'B+', pct: 65 }
-  if (score >= 60)  return { letter: 'B',  pct: 55 }
-  if (score >= 30)  return { letter: 'B-', pct: 45 }
+  if (score >= 250) return { letter: 'A+', pct: 95 }
+  if (score >= 150) return { letter: 'A',  pct: 85 }
+  if (score >= 100) return { letter: 'A-', pct: 75 }
+  if (score >= 60)  return { letter: 'B+', pct: 65 }
+  if (score >= 30)  return { letter: 'B',  pct: 55 }
+  if (score >= 15)  return { letter: 'B-', pct: 45 }
   return              { letter: 'C',  pct: 35 }
 }
 
@@ -130,7 +130,7 @@ function GitHubStatsCard({
     { icon: <GitCommitHorizontal className="h-4 w-4" />, label: `Total Commits (${new Date().getFullYear()}):`, value: commits },
     { icon: <GitPullRequest      className="h-4 w-4" />, label: 'Total PRs:',                              value: prs },
     { icon: <CircleDot           className="h-4 w-4" />, label: 'Total Issues:',                           value: issues },
-    { icon: <BookMarked          className="h-4 w-4" />, label: 'Contributed to:',                         value: contributedTo },
+    { icon: <BookMarked          className="h-4 w-4" />, label: 'Public Repositories:',                    value: contributedTo },
   ]
 
   return (

@@ -115,50 +115,15 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Full Stack E-commerce',
+    title: 'LuxeMart E-commerce',
     description:
       'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
-    image: '/project-ecommerce.svg',
+    image: '/luxemart.png',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     githubUrl: 'https://github.com/muzammil8166/',
     liveUrl: 'https://example.com',
   },
-  {
-    title: 'Real-time Chat App',
-    description:
-      'Socket.io powered chat with presence, typing indicators, DMs, and message search—built for low latency at scale.',
-    image: '/project-chat.svg',
-    tags: ['React', 'Socket.io', 'Express', 'Redis'],
-    githubUrl: 'https://github.com/muzammil8166/',
-    liveUrl: 'https://example.com',
-  },
-  {
-    title: 'SaaS Dashboard',
-    description:
-      'Role-based analytics dashboard with subscriptions, feature flags, and a polished design system.',
-    image: '/project-saas.svg',
-    tags: ['TypeScript', 'React', 'PostgreSQL', 'Prisma'],
-    githubUrl: 'https://github.com/muzammil8166/',
-    liveUrl: 'https://example.com',
-  },
-  {
-    title: 'AI Blog Platform',
-    description:
-      'AI-assisted authoring, markdown workflows, and SEO-focused publishing—built with performance-first rendering.',
-    image: '/project-ai-blog.svg',
-    tags: ['Next.js', 'OpenAI', 'Tailwind', 'MDX'],
-    githubUrl: 'https://github.com/muzammil8166/',
-    liveUrl: 'https://example.com',
-  },
-  {
-    title: 'Project Management Tool',
-    description:
-      'Kanban + timelines, real-time collaboration, and smart notifications—designed for high-leverage teams.',
-    image: '/project-pm.svg',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'WebSockets'],
-    githubUrl: 'https://github.com/muzammil8166/',
-    liveUrl: 'https://example.com',
-  },
+
 ]
 
 export const EXPERIENCE: ExperienceItem[] = [

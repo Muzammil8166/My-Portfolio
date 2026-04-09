@@ -60,3 +60,8 @@ body {
   background: rgba(var(--fg) / 0.05);
   border: 1px solid rgba(var(--fg) / 0.1);
 }
+
+[data-theme="light"] .glass {
+  background: rgba(var(--card) / 0.5);
+  border-color: rgba(var(--fg) / 0.08);
+}
