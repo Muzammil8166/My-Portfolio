@@ -81,7 +81,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'TypeScript', level: 90 },
       { name: 'Next.js', level: 85 },
       { name: 'Tailwind CSS', level: 95 },
-      { name: 'Redux', level: 80 },
     ],
   },
   {
@@ -107,20 +106,28 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'Git', level: 90 },
       { name: 'Docker', level: 78 },
       { name: 'AWS', level: 72 },
-      { name: 'CI/CD', level: 75 },
       { name: 'Vercel', level: 85 },
     ],
   },
 ]
 
 export const PROJECTS: Project[] = [
+    {
+    title: 'Point of Sale System',
+    description:
+      'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
+    image: '/pos.png',
+    tags: ['Next.js', 'Node.js', 'MongoDB', 'TailwindCSS'],
+    githubUrl: 'https://github.com/muzammil8166/',
+    liveUrl: 'http://pos.mjal.me/',
+  },
   {
     title: 'LuxeMart',
     description:
       'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
     image: '/luxemart.png',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/muzammil8166/',
+    githubUrl: 'https://github.com/muzammil8166/Luxemart',
     liveUrl: 'https://google.com',
   },
   {
@@ -129,14 +136,14 @@ export const PROJECTS: Project[] = [
       'A production-grade storefront with auth, cart/checkout, admin dashboards, and search—optimized for performance and conversion.',
     image: '/thunderboltt.png',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/muzammil8166/',
+    githubUrl: 'https://github.com/muzammil8166/ThunderBoltt',
     liveUrl: 'https://google.com',
   },
 ]
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    company: 'Company Name',
+    company: 'Iqonic Design',
     role: 'Junior MERN Stack Developer',
     duration: '2026 — Present',
     achievements: [
@@ -149,12 +156,13 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'Freelancer',
     role: 'Full Stack Developer',
-    duration: '2023 — 2026',
+    duration: '2021 — 2026',
     achievements: [
       'MERN Stack Developer with hands-on experience building full-stack web applications using MongoDB, Express.js, React, and Node.js.',
       'Delivered scalable, user-friendly solutions with optimized performance and responsive UI tailored to client requirements.',
     ],
     tech: ['React', 'Express', 'MySQL', 'Vercel',],
   },
+  
 ]
 

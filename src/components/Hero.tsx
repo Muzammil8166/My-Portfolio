@@ -142,12 +142,12 @@ export function Hero() {
                       APIs
                     </span>
                   </li>
-                  <li className="flex items-center justify-between">
+                  {/* <li className="flex items-center justify-between">
                     <span>CI/CD automation</span>
                     <span className="font-mono text-xs text-[rgb(var(--fg))]/80">
                       Shipping
                     </span>
-                  </li>
+                  </li> */}
                 </ul>
 
                 <div className="mt-6 rounded-2xl border border-[rgb(var(--fg))]/10 bg-black/10 p-4">
