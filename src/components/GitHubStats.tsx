@@ -82,11 +82,11 @@ function GradeRing({ letter, pct }: { letter: string; pct: number }) {
   return (
     <div className="relative flex items-center justify-center w-[90px] h-[90px] shrink-0">
       <svg width="90" height="90" viewBox="0 0 90 90" className="-rotate-90">
-        <circle cx="45" cy="45" r={r} fill="none" stroke="#30363d" strokeWidth="6" />
+        <circle cx="45" cy="45" r={r} fill="none" stroke="rgba(var(--fg) / 0.15)" strokeWidth="6" />
         <motion.circle
           cx="45" cy="45" r={r}
           fill="none"
-          stroke="#58a6ff"
+          stroke="rgb(var(--accent))"
           strokeWidth="6"
           strokeLinecap="round"
           strokeDasharray={circ}
@@ -96,7 +96,7 @@ function GradeRing({ letter, pct }: { letter: string; pct: number }) {
           transition={{ duration: 1.2, ease: 'easeOut' }}
         />
       </svg>
-      <span className="absolute text-xl font-bold" style={{ color: '#39d353' }}>
+      <span className="absolute text-xl font-bold" style={{ color: 'rgb(var(--accent))' }}>
         {letter}
       </span>
     </div>
@@ -134,27 +134,24 @@ function GitHubStatsCard({
   ]
 
   return (
-    <div
-      style={{ background: '#0d1117', border: '1px solid #30363d' }}
-      className="rounded-2xl p-5 flex items-center gap-4 h-full"
-    >
+    <div className="glass rounded-2xl p-5 flex items-center gap-4 h-full">
       {/* Left: stat rows */}
       <div className="flex-1 min-w-0">
-        <h3 className="text-base font-bold mb-3" style={{ color: '#58a6ff' }}>
+        <h3 className="text-base font-bold mb-3" style={{ color: 'rgb(var(--accent))' }}>
           {user?.name ?? username}'s GitHub Stats
         </h3>
 
         <div className="space-y-2">
           {rows.map(({ icon, label, value }) => (
             <div key={label} className="flex items-center gap-2 text-sm">
-              <span style={{ color: '#a371f7' }}>{icon}</span>
-              <span style={{ color: '#c9d1d9' }} className="flex-1">{label}</span>
+              <span style={{ color: 'rgb(var(--accent))' }}>{icon}</span>
+              <span style={{ color: 'rgb(var(--muted))' }} className="flex-1">{label}</span>
               {loading ? (
                 <Skeleton className="h-4 w-8" />
               ) : error || value === null ? (
-                <span style={{ color: '#39d353' }} className="font-bold">—</span>
+                <span className="font-bold" style={{ color: 'rgb(var(--fg))' }}>—</span>
               ) : (
-                <span style={{ color: '#39d353' }} className="font-bold">{value}</span>
+                <span className="font-bold" style={{ color: 'rgb(var(--accent))' }}>{value}</span>
               )}
             </div>
           ))}
@@ -179,11 +176,8 @@ type LangEntry = { lang: string; pct: number }
 
 function LanguagesCard({ langs, loading, error }: { langs: LangEntry[]; loading: boolean; error: boolean }) {
   return (
-    <div
-      style={{ background: '#0d1117', border: '1px solid #30363d' }}
-      className="rounded-2xl p-5 h-full"
-    >
-      <h3 className="text-base font-bold mb-3" style={{ color: '#58a6ff' }}>
+    <div className="glass rounded-2xl p-5 h-full">
+      <h3 className="text-base font-bold mb-3" style={{ color: 'rgb(var(--accent))' }}>
         Most Used Languages
       </h3>
 
@@ -195,7 +189,7 @@ function LanguagesCard({ langs, loading, error }: { langs: LangEntry[]; loading:
           </div>
         </div>
       ) : error || langs.length === 0 ? (
-        <p className="text-sm py-4 text-center" style={{ color: '#8b949e' }}>
+        <p className="text-sm py-4 text-center" style={{ color: 'rgb(var(--muted))' }}>
           No language data available
         </p>
       ) : (
@@ -219,13 +213,13 @@ function LanguagesCard({ langs, loading, error }: { langs: LangEntry[]; loading:
           {/* 2-column legend */}
           <div className="grid grid-cols-2 gap-x-6 gap-y-2.5">
             {langs.map(({ lang, pct }) => (
-              <div key={lang} className="flex items-center gap-1.5 text-sm" style={{ color: '#c9d1d9' }}>
+              <div key={lang} className="flex items-center gap-1.5 text-sm" style={{ color: 'rgb(var(--fg))' }}>
                 <span
                   className="inline-block h-3 w-3 rounded-full shrink-0"
                   style={{ background: getLangColor(lang) }}
                 />
                 <span className="truncate">{lang}</span>
-                <span className="ml-auto shrink-0 text-xs" style={{ color: '#8b949e' }}>
+                <span className="ml-auto shrink-0 text-xs" style={{ color: 'rgb(var(--muted))' }}>
                   {pct.toFixed(2)}%
                 </span>
               </div>
