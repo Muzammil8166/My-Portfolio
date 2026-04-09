@@ -5,7 +5,7 @@ import { SKILL_GROUPS } from '../data/siteData'
 
 export function Skills() {
   return (
-    <section id="skills" className="py-16 sm:py-20">
+    <section id="skills" className="py-6 sm:py-10">
       <Container>
         <SectionHeading
           eyebrow="Skills"

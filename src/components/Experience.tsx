@@ -5,7 +5,7 @@ import { EXPERIENCE } from '../data/siteData'
 
 export function Experience() {
   return (
-    <section id="experience" className="py-16 sm:py-20">
+    <section id="experience" className="py-6 sm:py-10">
       <Container>
         <SectionHeading
           eyebrow="Experience"

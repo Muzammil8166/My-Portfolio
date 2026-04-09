@@ -51,7 +51,7 @@ export function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="py-16 sm:py-20">
+    <section id="projects" className="py-6 sm:py-10">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading

@@ -357,7 +357,7 @@ export function GitHubStats() {
   ]
 
   return (
-    <section id="github" className="py-16 sm:py-20">
+    <section id="github" className="py-6 sm:py-10">
       <Container>
         <SectionHeading
           eyebrow="GitHub"

@@ -80,7 +80,7 @@ export function Contact() {
 
 
   return (
-    <section id="contact" className="py-16 sm:py-20">
+    <section id="contact" className="py-6 sm:py-10">
       {popupMessage ? (
         <div className="fixed left-1/2 top-20 z-50 w-[min(90vw,520px)] -translate-x-1/2 rounded-2xl border border-[rgb(var(--fg))]/20 bg-[rgb(var(--bg))]/95 px-5 py-4 text-sm text-[rgb(var(--fg))] shadow-2xl backdrop-blur-md">
           <div className="flex items-center justify-between gap-3">

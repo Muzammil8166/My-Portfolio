@@ -6,7 +6,7 @@ import profile from '../assets/SAVE_20251031_225315.jpg.jpeg';
 
 export function About() {
   return (
-    <section id="about" className="py-16 sm:py-20">
+    <section id="about" className="py-6 sm:py-10">
       <Container>
         <SectionHeading
           eyebrow="About"
