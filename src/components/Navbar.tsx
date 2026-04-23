@@ -61,10 +61,15 @@ export function Navbar(props: {
             className="group inline-flex items-center gap-2 rounded-xl px-2 py-2 text-sm font-semibold tracking-tight hover:bg-[rgb(var(--fg))]/5"
           >
             <span className="relative grid h-6 w-6 place-items-center rounded-lg bg-[rgb(var(--fg))]/5 ring-1 ring-[rgb(var(--fg))]/10">
-              <span className="h-2.5 w-2.5 rounded-full bg-[rgb(var(--accent))]" />
+              <img
+                src="/favicon.svg"
+                alt=""
+                aria-hidden="true"
+                className="h-4 w-4 object-contain"
+              />
             </span>
-            <span className="text-[rgb(var(--fg))]">
-              {import.meta.env.VITE_BRAND ?? 'Portfolio'}
+            <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">
+              {import.meta.env.VITE_BRAND ?? 'Muzammil.Dev'}
             </span>
           </button>
 
