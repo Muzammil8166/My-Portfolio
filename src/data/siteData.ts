@@ -41,7 +41,7 @@ export type ExperienceItem = {
 
 export const SITE = {
   name: 'Muzammil',
-  role: 'Junior MERN Stack Developer',
+  role: 'MERN Stack Developer',
   location: 'Surat',
   email: 'muzammilkureshi.in@gmail.com',
   tagline:
@@ -78,25 +78,23 @@ export const SKILL_GROUPS: SkillGroup[] = [
     title: 'Frontend',
     skills: [
       { name: 'React', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Next.js', level: 85 },
+      { name: 'TypeScript', level: 75 },
+      { name: 'Next.js', level: 70 },
       { name: 'Tailwind CSS', level: 95 },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'Node.js', level: 90 },
-      { name: 'Express.js', level: 88 },
-      { name: 'REST APIs', level: 92 },
-      { name: 'GraphQL', level: 78 },
+      { name: 'Node.js', level: 80 },
+      { name: 'Express.js', level: 85 },
+      { name: 'REST APIs', level: 80 },
     ],
   },
   {
     title: 'Database',
     skills: [
       { name: 'MongoDB', level: 90 },
-      { name: 'PostgreSQL', level: 80 },
       { name: 'MySQL', level: 90 },
     ],
   },
@@ -105,7 +103,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       { name: 'Git', level: 90 },
       { name: 'Docker', level: 78 },
-      { name: 'AWS', level: 72 },
       { name: 'Vercel', level: 85 },
     ],
   },
@@ -144,8 +141,8 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'Iqonic Design',
-    role: 'Junior MERN Stack Developer',
-    duration: '2026 — Present',
+    role: 'Intern MERN Stack Developer',
+    duration: 'Jan 2026 — April 2026',
     achievements: [
       'Built a full-stack MERN Point of Sale system with admin panel, inventory management, and CRUD operations.',
       'Worked on scalable project architecture, backend integration, and performance optimization to deliver efficient full-stack solutions.',
